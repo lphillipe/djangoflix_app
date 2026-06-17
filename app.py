@@ -11,10 +11,10 @@ def main():
     )
 
     if menu_option == 'Início':
-        show_genres()
+        st.write('Início')
 
     if menu_option == 'Gêneros':
-        st.write('Lista de Gêneros')
+        show_genres()
 
     if menu_option == 'Atores/Atrizes':
         st.write('Lista de Atores/Atrizes')
