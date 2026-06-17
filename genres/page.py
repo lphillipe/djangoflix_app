@@ -20,7 +20,11 @@ genres = [
 def show_genres():
     st.write('Lista de Gêneros:')
 
-    AgGrid(pd.DataFrame(genres))
+    AgGrid(
+        data=pd.DataFrame(genres),
+        reload_data=True,
+        key='genre_grid',
+    )
 
     st.title('Cadastrar novo Gênero')
     name = st.text_input('Nome do Gênero')
