@@ -1,5 +1,6 @@
 import requests
 import streamlit as st
+from login.service import logout
 
 class GenreRepository:
 
@@ -17,4 +18,7 @@ class GenreRepository:
         )
         if response.status_code == 200:
             return response.json()
+        if response.status_code == 401:
+            logout()
+            return None
         raise Exception(f'Erro ao obter dados da API. Status code: {response.status_code}')
