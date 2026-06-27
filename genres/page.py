@@ -23,4 +23,10 @@ def show_genres():
     st.title('Cadastrar novo Gênero')
     name = st.text_input('Nome do Gênero')
     if st.button('Cadastrar'):
-        st.success(f'Gênero "{name}" cadastrado com sucesso!')
+        new_genre = genre_service.create_genre(
+            name=name,
+        )
+        if new_genre:
+            st.rerun()
+        else:
+            st.error('Erro ao cadastrar o gênero. Verifique os campos')
