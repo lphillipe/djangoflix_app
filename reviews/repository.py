@@ -9,7 +9,7 @@ class ReviewRepository:
         self.__base_url = 'https://luisphillipe.pythonanywhere.com/api/v1/'
         self.__reviews_url = f'{self.__base_url}reviews/'
         self.__headers = {
-            'Authorization:' f'Bearer {st.session_state.token}'
+            'Authorization': f'Bearer {st.session_state.token}'
         }
 
     def get_reviews(self):
