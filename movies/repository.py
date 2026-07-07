@@ -38,7 +38,7 @@ class MovieRepository:
             return None
         raise Exception(f'Erro ao obter dados da API. Status code: {response.status_code}')
     
-    def get_movies_stats(self):
+    def get_movie_stats(self):
         response = requests.get(
             f'{self.__movies_url}stats/',
             headers=self.__headers,
