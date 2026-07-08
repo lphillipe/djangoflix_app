@@ -11,7 +11,8 @@ dependencies = [
     "pandas (>=3.0.3,<4.0.0)",
     "streamlit-aggrid (>=1.2.1.post2,<2.0.0)",
     "requests (>=2.34.2,<3.0.0)",
-    "plotly (>=6.8.0,<7.0.0)"
+    "plotly (>=6.8.0,<7.0.0)",
+    "pylance (>=8.0.0,<9.0.0)"
 ]
 
 

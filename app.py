@@ -19,7 +19,7 @@ def main():
             ['Inicio', 'Gêneros', 'Atores/Atrizes', 'Filmes', 'Avaliações']
         )
 
-        if menu_option == 'Início':
+        if menu_option == 'Inicio':
             show_home()
 
         if menu_option == 'Gêneros':
