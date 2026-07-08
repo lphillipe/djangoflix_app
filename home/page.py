@@ -7,6 +7,10 @@ def show_home():
     
     st.title('Estatísticas de Filmes')
 
+    if movie_stats is None:
+        st.error('Erro ao carregar estatísticas de filmes')
+        return
+
     st.subheader('Total de Filmes Cadastrados:')
     st.write(movie_stats['total_movies'])
 
