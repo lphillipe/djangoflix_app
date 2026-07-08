@@ -30,3 +30,9 @@ class ReviewRepository:
             headers=self.__headers,
             data=review,
         )
+        if response.status_code == 200:
+            return response.json()
+        if response.status_code == 401:
+            logout()
+            return None
+        raise Exception(f'Erro ao criar uma review. Status code: {response.status_code}')
